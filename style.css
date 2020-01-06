@@ -19,7 +19,7 @@ body {
 .container{
     display: grid;
     grid-template-columns: minmax(5rem, 1fr) repeat(8, minmax( 14rem, 3rem))  minmax(5rem, 1fr);
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: repeat(3, min-content);
     grid-row-gap: 1.5rem;
     margin-top: 1.6rem;
 }
@@ -42,7 +42,6 @@ body {
 
 .social-icon:hover{
     color: #90303d;
-    font-size: 2.3rem;
     transform: rotateZ(360deg);
 }
 
@@ -108,28 +107,58 @@ body {
 /*second nav*/
 
 .second-nav{
-    display: grid; 
     grid-column: 2/10;
     grid-row: 3/4; 
+    border-top: .2rem #230444 solid;
+    border-bottom: .2rem #230444 solid;
 }
 
 .second-nav-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
-    border-top: .2rem #230444 solid;
-    border-bottom: .2rem #230444 solid;
-    padding: .3rem 0;
-}
-
-.second-nav-item{
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     list-style: none;
 }
+
 
 .second-nav-link{
     text-decoration: none;
     font-size: 1.6rem;
+    text-align: center;
     color: #230444;
     cursor: pointer;
+    display: grid;
+    width: 100%;
+    padding: .8rem 0;
+    transition: all .3s;
+}
+
+.second-nav-link::before,
+.second-nav-link::after{
+    content: "";
+    width: 0;
+    height: .1rem;
+    background-color: aliceblue;
+    display: block;
+    transition: width .3s cubic-bezier(.55, 0, .98, .54), background-color .5s .3s;
+}
+
+.second-nav-link::after{
+    justify-self: end;
+}
+
+.second-nav-item:hover .second-nav-link{
+    background-color: #230444;
+    color: aliceblue;
+}
+
+.second-nav-item:hover .second-nav-link::before,
+.second-nav-item:hover .second-nav-link::after{
+    width: 100%;
+    background-color: aliceblue;
+
+}
+.dropdown-menu{
+    display: none;
 }
 
 
