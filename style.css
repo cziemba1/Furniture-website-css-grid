@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya');
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Alegreya', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*navbar*/
+.container{
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) repeat(8, minmax( 14rem, 3rem))  minmax(5rem, 1fr);
+    grid-template-rows: repeat(4, min-content);
+    grid-row-gap: 1.5rem;
+    margin-top: 1.6rem;
+}
+
+.social-link-container{
+    grid-row: 1/2;
+    grid-column: 2/4;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.social-icon{
+    color: #230444;
+    font-size: 2rem;
+    transition: all .2s ease-in-out;
+}
+
+.social-icon:hover{
+    color: #90303d;
+    font-size: 2.3rem;
+    transform: rotateZ(360deg);
+}
+
+.first-nav{
+    grid-row: 1 / 2;
+    grid-column: 6 / -2;
+    
+}
+
+.first-nav-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.first-nav-item{
+    list-style: none;
+}
+
+
+.first-nav-link{
+    text-decoration: none;
+    color: #230444;
+    letter-spacing: .1rem;
+    font-size: 1.3rem;
+    transition: color .5s ease-in-out;
+}
+
+.first-nav-link:hover{
+    color: #90303d;
+    font-size: 1.5rem;
+}
+
+.first-nav-link i{
+    margin-right: .1rem;
+}
+
+.form-input{
+    grid-column: 8/10;
+    grid-row: 2/3;
+    grid-template-columns: repeat(auto-fit, 1fr);
+}
+
+.search-input{
+    border: none;
+    border-bottom: .1rem #230444 solid;
+    font-size: 1.4rem;
+    letter-spacing: .3rem;
+    color: #90303d;
+}
+
+.search-btn{
+    background-color: transparent;
+    border: none;
+    color: #230444;
+}
+
+.search-input:focus{
+    background-color: rgba(144, 48, 61, .1);
+}
+
+/*second nav*/
+
+.second-nav{
+    display: grid; 
+    grid-column: 2/10;
+    grid-row: 3/4; 
+}
+
+.second-nav-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    border-top: .2rem #230444 solid;
+    border-bottom: .2rem #230444 solid;
+    padding: .3rem 0;
+}
+
+.second-nav-item{
+    list-style: none;
+}
+
+.second-nav-link{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #230444;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
